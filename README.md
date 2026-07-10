@@ -36,20 +36,7 @@ técnica por el camino.
 
 ## Arquitectura
 
-```text
-Internet
-    │
-Router
-    │
-Proxmox VE — HP ProDesk 600 G4 Mini
-    │
-    ├── LXC 100 — AdGuard Home
-    ├── LXC 101 — BIND9
-    ├── LXC 102 — Nginx Proxy Manager
-    ├── LXC 103 — Uptime Kuma
-    ├── LXC 104 — Vaultwarden
-    └── LXC 105 — Prometheus + Grafana
-```
+![Diagrama](docs/architecture/CORELAB.png)
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
