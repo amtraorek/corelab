@@ -2,7 +2,7 @@
 
 ## Diagrama
 
-![Diagrama de arquitectura de red](docs\screenshots\network\CORELAB.png)
+![Diagrama de arquitectura de red](../screenshots/network/CORELAB.png)
 
 ## Esquema de IPs
 
