@@ -29,7 +29,7 @@ técnica por el camino.
 ![Hardware ATK CoreLab](screenshots/hardware/prodesk-front.jpg)
 *HP ProDesk 600 G4 Mini corriendo Proxmox VE*
 
-![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
+![Resumen Proxmox](docs/screenshots/hardware/proxmox-overview.png)
 *Uso de recursos actual de todas las LXC*
 
 ---
