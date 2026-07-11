@@ -36,7 +36,7 @@ técnica por el camino.
 
 ## Arquitectura
 
-![Diagrama](docs/architecture/CORELAB.png)
+![Diagrama](docs/screenshots/network/CORELAB.png)
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
