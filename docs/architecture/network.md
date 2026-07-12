@@ -20,7 +20,7 @@
 ## Acceso remoto
 
 - **WireGuard VPN**, IP interna del túnel: `10.0.0.1`
-- Acceso vía DDNS mediante el puerto 51280 (Estàndar de Wireguard)
+- Acceso vía DDNS mediante el puerto 51280 (Estándar de Wireguard)
 - No se exponen puertos de servicios directamente a internet; todo el acceso remoto pasa por el túnel VPN
   <br>
 ![Configuración de Wireguard](../screenshots/network/wireguard-configuration.png)
@@ -38,7 +38,7 @@
 - CA propia creada manualmente para el laboratorio
 Con un certificado propio, nos permite no tener que usar el DNS dinámico, y dar mayor seguridad al tener todo centralizado en nuestro servidor local sin exponer otros puertos innecesarios.
 - Certificado wildcard para `*.traore.home`, gestionado y renovado desde Nginx Proxy Manager  <br>
-![Configuración de Uptime Kuma](../screenshots/nginx-proxy-manager/nginx-certificates.png)
+![Configuración de Certificados TLS](../screenshots/nginx-proxy-manager/nginx-certificates.png)
 - HTTPS forzado en todos los servicios expuestos vía proxy  <br>
 ![Configuración SSL de host](../screenshots/nginx-proxy-manager/nginx-adguard-host.png)
 ## Monitorización de la red
@@ -59,7 +59,7 @@ Se eligió WireGuard sobre alternativas como Tailscale principalmente para no de
 - **Repositorio Enterprise activo sin suscripción:** Proxmox viene configurado por defecto con el repositorio `pve-enterprise`, que requiere una suscripción de pago. Al no tener suscripción, `apt-get update` fallaba y el dashboard mostraba el aviso "No hay una suscripción válida".  <br>
   ![Aviso de suscripción no válida](../screenshots/network/suscripcion-no-valida-proxmox.png)
 
-   **Sistema → Repositorios**, se confirmó que el repositorio `pve-enterprise` estaba activado (`Enabled: true`) apuntando a `enterprise.proxmox.com/debian/pve`, y no había ningún repositorio `pve-no-subscription` configurado.
+   Dentro de **Sistema → Repositorios**, se confirmó que el repositorio `pve-enterprise` estaba activado (`Enabled: true`) apuntando a `enterprise.proxmox.com/debian/pve`, y no había ningún repositorio `pve-no-subscription` configurado.
 
   ![Repositorio Enterprise activado sin suscripción](../screenshots/network/suscripcion-no-valida-proxmox-desactivar.png)
 
@@ -75,7 +75,11 @@ TASK ERROR: command '/usr/bin/termproxy 5900 --path /nodes/server --perm Sys.Con
 ![Error de Proxmox](../screenshots/network/proxmox-error.png)
 Accediendo directamente por IP (`192.168.1.200:8006`) la consola sí funcionaba, lo cual significaba un problema del proxy y no del hipervisor (Proxmox).
 
-**Causa:** la consola de Proxmox usa una conexión WebSocket independiente de la conexión HTTPS normal para transmitir vídeo/teclado en tiempo real. Dentro de nuestro proxy no teníamos habilitado el soporte de WebSockets en ese host proxy, por lo que la conexión nunca llegaba a establecerse i no nos podiamos conectar correctamente de manera remota.
+**Causa:** la consola de Proxmox usa una conexión WebSocket independiente de la conexión HTTPS normal para transmitir vídeo/teclado en tiempo real. Dentro de nuestro proxy no teníamos habilitado el soporte de WebSockets en ese host proxy, por lo que la conexión nunca llegaba a establecerse y no nos podiamos conectar correctamente de manera remota.
 
 **Solución:** en Nginx Proxy Manager, dentro de la configuración del host `server.traore.home`, activar la opción **"Websockets Support"**. Tras esto, la consola volvió a funcionar con normalidad accediendo por el dominio interno.  <br>
 ![Solución al error de Proxmox](../screenshots/network/proxmox-solution.png)
+
+---
+
+*Última actualización: 12/07/2026*
