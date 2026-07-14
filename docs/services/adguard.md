@@ -21,13 +21,13 @@ Funciona en el LXC 100 (Debian 12) y actúa como DNS primario de la red. Está c
 
 
 ```text
-Usuarios de la red
+Cliente
        │
        ▼
 AdGuard Home (bloqueo + filtrado)
        │
        ├── *.traore.home → BIND9 (DNS interno)
-       └── resto de dominios → Quad (Internet)
+       └── resto de dominios → Quad9 (Internet)
 ```
 
 ## Configuración relevante
@@ -35,7 +35,7 @@ AdGuard Home (bloqueo + filtrado)
 - **Consultas DNS gestionadas:** en torno a 49.000 consultas/24h en la red doméstica
 - **Bloqueo por filtros:** ~17% de las consultas totales bloqueadas (publicidad y rastreadores)
 - **Tiempo medio de procesamiento:** 10 ms
-- **Dominios más bloqueados:** dominios de telemetría y tracking (analiticas i logs de apps de streaming)
+- **Dominios más bloqueados:** dominios de telemetría y tracking (analíticas i logs de apps de streaming)
 - **Clientes monitorizados:** cada dispositivo de la red aparece identificado por IP, con estadísticas individuales de las peticiones
 
 ## Ejemplos
