@@ -2,7 +2,7 @@
 
 ## Diagrama
 
-![Diagrama de arquitectura de red](../screenshots/network/CORELAB.png)
+![Diagrama de arquitectura de red](../../screenshots/network/corelab-diagram.png)
 
 ## Esquema de IPs
 
@@ -23,14 +23,14 @@
 - Acceso vía DDNS mediante el puerto 51280 (Estándar de Wireguard)
 - No se exponen puertos de servicios directamente a internet; todo el acceso remoto pasa por el túnel VPN
   <br>
-![Configuración de Wireguard](../screenshots/network/wireguard-configuration.png)
+![Configuración de Wireguard](../../screenshots/network/wireguard-configuration.png)
 ## Resolución DNS interna
 
 - Dominio local: `*.traore.home`
 - AdGuard Home actúa como DNS principal de la red, filtrando publicidad y trackers <br>
-![Configuración de DNS](../screenshots/adguard/adguard-bind-configuration.png)
+![Configuración de DNS](../../screenshots/adguard/adguard-bind-configuration.png)
 - Las consultas del dominio interno (`traore.home`) se reenvían desde AdGuard Home a BIND9, que resuelve los registros internos  <br>
-![Configuración de bind](../screenshots/bind9/bind9-configuration.png)
+![Configuración de bind](../../screenshots/bind9/bind9-configuration.png)
 - El resto de tráfico DNS sale filtrado normalmente hacia internet
 
 ## Certificados TLS
@@ -38,14 +38,14 @@
 - CA propia creada manualmente para el laboratorio
 Con un certificado propio, nos permite no tener que usar el DNS dinámico, y dar mayor seguridad al tener todo centralizado en nuestro servidor local sin exponer otros puertos innecesarios.
 - Certificado wildcard para `*.traore.home`, gestionado y renovado desde Nginx Proxy Manager  <br>
-![Configuración de Certificados TLS](../screenshots/nginx-proxy-manager/nginx-certificates.png)
+![Configuración de Certificados TLS](../../screenshots/nginx-proxy-manager/nginx-certificates.png)
 - HTTPS forzado en todos los servicios expuestos vía proxy  <br>
-![Configuración SSL de host](../screenshots/nginx-proxy-manager/nginx-adguard-host.png)
+![Configuración SSL de host](../../screenshots/nginx-proxy-manager/nginx-adguard-host.png)
 ## Monitorización de la red
 
 - **Prometheus + Grafana** (LXC 105): recolecta métricas de cada LXC mediante `node_exporter`, instalado individualmente en cada contenedor
 - **Uptime Kuma** (LXC 103): Realiza checks periódicos de disponibilidad (ping/HTTP/DNS) sobre todos los servicios de la red. Esta configurado de manera que cada 10 minutos haga un chequeo de los servicios configurados.  <br>
-![Configuración de Uptime Kuma](../screenshots/uptime-kuma/uptime-kuma-adguard.png)
+![Configuración de Uptime Kuma](../../screenshots/uptime-kuma/uptime-kuma-adguard.png)
 ## Decisiones de diseño
 
 - **Red plana (192.168.1.x)** en vez de VLANs: 
@@ -57,14 +57,14 @@ Se eligió WireGuard sobre alternativas como Tailscale principalmente para no de
 ## Problemas encontrados
 
 - **Repositorio Enterprise activo sin suscripción:** Proxmox viene configurado por defecto con el repositorio `pve-enterprise`, que requiere una suscripción de pago. Al no tener suscripción, `apt-get update` fallaba y el dashboard mostraba el aviso "No hay una suscripción válida".  <br>
-  ![Aviso de suscripción no válida](../screenshots/network/suscripcion-no-valida-proxmox.png)
+  ![Aviso de suscripción no válida](../../screenshots/network/suscripcion-no-valida-proxmox.png)
 
    Dentro de **Sistema → Repositorios**, se confirmó que el repositorio `pve-enterprise` estaba activado (`Enabled: true`) apuntando a `enterprise.proxmox.com/debian/pve`, y no había ningún repositorio `pve-no-subscription` configurado.
 
-  ![Repositorio Enterprise activado sin suscripción](../screenshots/network/suscripcion-no-valida-proxmox-desactivar.png)
+  ![Repositorio Enterprise activado sin suscripción](../../screenshots/network/suscripcion-no-valida-proxmox-desactivar.png)
 
   **Solución:** se desactivó el repositorio `pve-enterprise` y se añadió el repositorio `pve-no-subscription`, gratuito y mantenido por la comunidad. Tras actualizar paquetes de nuevo, la actualización se completó sin errores. El aviso amarillo restante ("El repositorio no-subscription no es recomendado para uso en producción") es normal y esperado — es solo informativo, no un error.  <br>
-  ![Repositorio no-subscription activado correctamente](../screenshots/network/solucion-suscripcion-no-valida-proxmox.png)
+  ![Repositorio no-subscription activado correctamente](../../screenshots/network/solucion-suscripcion-no-valida-proxmox.png)
 - ### Consola de Proxmox no carga a través del dominio interno
 
 Al acceder a Proxmox mediante `server.traore.home` (a través de Nginx Proxy Manager), la consola noVNC de los nodos/LXC no cargaba, mostrando el siguiente error:
@@ -72,13 +72,13 @@ Al acceder a Proxmox mediante `server.traore.home` (a través de Nginx Proxy Man
 failed waiting for client: timed out
 TASK ERROR: command '/usr/bin/termproxy 5900 --path /nodes/server --perm Sys.Console --vncticket-endpoint --verify-port --ticket-fd 6 -- /bin/login -f root' failed: exit code 1
 ```
-![Error de Proxmox](../screenshots/network/proxmox-error.png)
+![Error de Proxmox](../../screenshots/network/proxmox-error.png)
 Accediendo directamente por IP (`192.168.1.200:8006`) la consola sí funcionaba, lo cual significaba un problema del proxy y no del hipervisor (Proxmox).
 
 **Causa:** la consola de Proxmox usa una conexión WebSocket independiente de la conexión HTTPS normal para transmitir vídeo/teclado en tiempo real. Dentro de nuestro proxy no teníamos habilitado el soporte de WebSockets en ese host proxy, por lo que la conexión nunca llegaba a establecerse y no nos podiamos conectar correctamente de manera remota.
 
 **Solución:** en Nginx Proxy Manager, dentro de la configuración del host `server.traore.home`, activar la opción **"Websockets Support"**. Tras esto, la consola volvió a funcionar con normalidad accediendo por el dominio interno.  <br>
-![Solución al error de Proxmox](../screenshots/network/proxmox-solution.png)
+![Solución al error de Proxmox](../../screenshots/network/proxmox-solution.png)
 
 ---
 

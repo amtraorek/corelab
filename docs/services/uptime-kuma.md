@@ -30,6 +30,6 @@ rendimiento (CPU, RAM, disco). Uptime Kuma, es una herramienta mucho mas sencill
 
 ## Ejemplos
 
-![Panel de monitores en Uptime Kuma](../screenshots/uptime-kuma/dashboard.png)
+![Panel de monitores en Uptime Kuma](../../screenshots/uptime-kuma/dashboard.png)
 *Panel principal mostrando el estado de todos los servicios monitorizados*
 

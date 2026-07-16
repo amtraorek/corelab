@@ -13,10 +13,10 @@ Valoré Pi-hole primero, que es la opción más conocida y la que más se recomi
 ## Cómo encaja en la infraestructura
 
 Funciona en el LXC 100 (Debian 12) y actúa como DNS primario de la red. Está configurado directamente en el router de mi ISP, así que todos los dispositivos que se conectan a la red lo usan automáticamente, sin tener que tocar la configuración de cada uno por separado.
- ![Configuración de DNS](../screenshots/network/router-configuration.png)
+ ![Configuración de DNS](../../screenshots/network/router-configuration.png)
 
  Las consultas de `*.traore.home` se reenvían a BIND9 para resolver los dominios internos; el resto se resuelve contra DNS público. 
- ![Configuración de DNS](../screenshots/adguard/adguard-bind-configuration.png)
+ ![Configuración de DNS](../../screenshots/adguard/adguard-bind-configuration.png)
   Se accede vía `adguard.traore.home`, a través de Nginx Proxy Manager con HTTPS.
 
 
@@ -40,11 +40,11 @@ AdGuard Home (bloqueo + filtrado)
 
 ## Ejemplos
 ### Panel de control de AdGuard Home
-![Panel de control de AdGuard Home](../screenshots/adguard/dashboard.png)
+![Panel de control de AdGuard Home](../../screenshots/adguard/dashboard.png)
 *Panel principal con estadísticas de consultas DNS, filtros aplicados y clientes más frecuentes.*
 ### Panel de bloqueo de servicios
-![Panel de bloqueo de servicios](../screenshots/adguard/bloqueo-de-servicios.png)
+![Panel de bloqueo de servicios](../../screenshots/adguard/bloqueo-de-servicios.png)
 *Ejemplo de dominios i servicios web bloqueados a partir de filtraje — Gemini, Grok, Manus.*
 ### Panel de registros de consultas
-![Panel de bloqueo de servicios](../screenshots/adguard/registro-de-consultas.png)
+![Panel de bloqueo de servicios](../../screenshots/adguard/registro-de-consultas.png)
 *Registro de consultas en tiempo real — se ve tanto tráfico externo (Google Video) como interno (resolución de `grafana.com` hacia el LXC 105)*

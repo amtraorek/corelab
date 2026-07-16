@@ -49,7 +49,7 @@ Nginx Proxy Manager (HTTPS)
 
 ## Ejemplos
 
-![Listado de proxy hosts](../screenshots/nginx-proxy-manager/hosts.png)
+![Listado de proxy hosts](../../screenshots/nginx-proxy-manager/hosts.png)
 *Listado de servicios publicados a través de Nginx Proxy Manager*
 
 ## Problemas encontrados

@@ -14,10 +14,10 @@ Ya tenía experiencia previa con BIND9, así que fue una elección bastante dire
 - Desplegado en LXC 101 (Debian 12)
 - Gestiona la zona interna `traore.home`
 - AdGuard Home reenvía a BIND9 cualquier consulta que termine en `.traore.home`
-![Configuración de DNS](../screenshots/adguard/adguard-bind-configuration.png)
+![Configuración de DNS](../../screenshots/adguard/adguard-bind-configuration.png)
 - El resto de tráfico DNS lo resuelve AdGuard directamente contra el DNS público (Quad9)
 - Cada servicio de la infraestructura tiene su propio registro dentro de esta zona (ej. `adguard.traore.home`, `vaultwarden.traore.home`, `monitor.traore.home`...)
-![Configuración de DNS](../screenshots/bind9/bind9-configuration.png)
+![Configuración de DNS](../../screenshots/bind9/bind9-configuration.png)
 
 ```text
 AdGuard Home
@@ -34,6 +34,6 @@ AdGuard Home
 
 ## Ejemplos
 
-![Configuración de zona en BIND9](../screenshots/bind9/zone-config.png)
+![Configuración de zona en BIND9](../../screenshots/bind9/zone-config.png)
 *Fichero de zona con los registros de los servicios de traore.home*
 

@@ -36,17 +36,17 @@ que voy tomando por el camino.
 | Almacenamiento | ~440 GB NVMe |
 | Hipervisor | Proxmox VE 9.2 |
 
-![Hardware ATK CoreLab](docs/screenshots/hardware/interior-prodesk.png )
+![Hardware ATK CoreLab](screenshots/hardware/interior-prodesk.png )
 *HP ProDesk 600 G4 Mini corriendo Proxmox VE*
 
-![Resumen Proxmox](docs/screenshots/hardware/proxmox-overview.png)
+![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
 *Uso de recursos actual de todas las LXC*
 
 ---
 
 ## Arquitectura
 
-![Diagrama](docs/screenshots/network/CORELAB.png)
+![Diagrama](screenshots/network/corelab-diagram.png)
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
@@ -76,7 +76,7 @@ la utilidad dentro de la infraestructura.
 ## Estructura del repositorio
 
 ```text
-ATK-CoreLab/
+CoreLab/
 ├── README.md
 ├── docs/
 │   ├── architecture/
@@ -138,4 +138,4 @@ ATK-CoreLab/
 - [ ] Homarr — dashboard 
 ---
 
-*Última actualización: 12/07/2026*
+*Última actualización: 16/07/2026*

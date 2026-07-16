@@ -22,10 +22,10 @@ Elegí 32GB de RAM pensando en los distintos servicios que tengo previsto ir añ
 
 ## Imágenes
 
-![Hardware físico — HP ProDesk 600 G4 Mini](../screenshots/hardware/interior-prodesk.png)
+![Hardware físico — HP ProDesk 600 G4 Mini](../../screenshots/hardware/interior-prodesk.png)
 *Interior del HP ProDesk 600 G4 Mini*
 
-![Resumen de recursos en Proxmox](../screenshots/hardware/proxmox-overview.png)
+![Resumen de recursos en Proxmox](../../screenshots/hardware/proxmox-overview.png)
 *Uso de CPU, RAM y disco del nodo con todos los LXC en marcha*
 
 ## Dificultades y problemas
