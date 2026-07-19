@@ -34,6 +34,6 @@ AdGuard Home
 
 ## Ejemplos
 
-![Configuración de zona en BIND9](../../screenshots/bind9/zone-config.png)
-*Fichero de zona con los registros de los servicios de traore.home*
+![Configuración de zona en BIND9](../../screenshots/bind9/nslookup.png)
+*Resolución con NPM*
 

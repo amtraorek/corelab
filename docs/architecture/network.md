@@ -8,14 +8,14 @@
 
 | Dispositivo / LXC | IP | Función |
 |---|---|---|
-| Router Xiaomi BE3600 | 192.168.1.1 | Puerta de enlace / Router |
-| Proxmox Node - server | 192.168.1.200 | Host de virtualización |
-| LXC 100 — AdGuard Home | 192.168.1.201 | DNS + filtrado de publicidad y trackers|
-| LXC 101 — BIND9 | 192.168.1.202 | Resolución DNS interna |
-| LXC 102 — Nginx Proxy Manager | 192.168.1.203 | Proxy inverso + certificación TLS |
-| LXC 103 — Uptime Kuma | 192.168.1.204 | Monitorización de disponibilidad |
-| LXC 104 — Vaultwarden | 192.168.1.205 | Gestor de contraseñas |
-| LXC 105 — Prometheus + Grafana | 192.168.1.206 | Métricas y dashboards |
+| Router Huawei BE3 | 192.168.1.1 | Puerta de enlace / Router |
+| Proxmox Node - server | 192.168.1.90 | Host de virtualización |
+| LXC 100 — AdGuard Home | 192.168.1.100 | DNS + filtrado de publicidad y trackers|
+| LXC 101 — BIND9 | 192.168.1.101 | Resolución DNS interna |
+| LXC 102 — Nginx Proxy Manager | 192.168.1.102 | Proxy inverso + certificación TLS |
+| LXC 103 — Uptime Kuma | 192.168.1.103 | Monitorización de disponibilidad |
+| LXC 104 — Vaultwarden | 192.168.1.104 | Gestor de contraseñas |
+| LXC 105 — Prometheus + Grafana | 192.168.1.105 | Métricas y dashboards |
 
 ## Acceso remoto
 
@@ -73,7 +73,7 @@ failed waiting for client: timed out
 TASK ERROR: command '/usr/bin/termproxy 5900 --path /nodes/server --perm Sys.Console --vncticket-endpoint --verify-port --ticket-fd 6 -- /bin/login -f root' failed: exit code 1
 ```
 ![Error de Proxmox](../../screenshots/network/proxmox-error.png)
-Accediendo directamente por IP (`192.168.1.200:8006`) la consola sí funcionaba, lo cual significaba un problema del proxy y no del hipervisor (Proxmox).
+Accediendo directamente por IP (`192.168.1.90:8006`) la consola sí funcionaba, lo cual significaba un problema del proxy y no del hipervisor (Proxmox).
 
 **Causa:** la consola de Proxmox usa una conexión WebSocket independiente de la conexión HTTPS normal para transmitir vídeo/teclado en tiempo real. Dentro de nuestro proxy no teníamos habilitado el soporte de WebSockets en ese host proxy, por lo que la conexión nunca llegaba a establecerse y no nos podiamos conectar correctamente de manera remota.
 
@@ -82,4 +82,6 @@ Accediendo directamente por IP (`192.168.1.200:8006`) la consola sí funcionaba,
 
 ---
 
-*Última actualización: 12/07/2026*
+*Última actualización: 17/07/2026*
+
+

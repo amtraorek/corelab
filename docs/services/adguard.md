@@ -30,11 +30,11 @@ AdGuard Home (bloqueo + filtrado)
        └── resto de dominios → Quad9 (Internet)
 ```
 
-## Configuración relevante
+## Datos 
 
-- **Consultas DNS gestionadas:** en torno a 49.000 consultas/24h en la red doméstica
-- **Bloqueo por filtros:** ~17% de las consultas totales bloqueadas (publicidad y rastreadores)
-- **Tiempo medio de procesamiento:** 10 ms
+- **Consultas DNS gestionadas:** en torno a 24.000 consultas/24h en la red doméstica
+- **Bloqueo por filtros:** ~23% de las consultas totales bloqueadas (publicidad y rastreadores)
+- **Tiempo medio de procesamiento:** 12 ms
 - **Dominios más bloqueados:** dominios de telemetría y tracking (analíticas i logs de apps de streaming)
 - **Clientes monitorizados:** cada dispositivo de la red aparece identificado por IP, con estadísticas individuales de las peticiones
 
