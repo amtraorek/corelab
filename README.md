@@ -37,8 +37,8 @@ que voy tomando por el camino.
 | Hipervisor | Proxmox VE 9.2 |
 
 <p align="center">
-  <img src="screenshots/hardware/prodesk-exterior.png" width="50%" />
-  <img src="screenshots/hardware/interior-prodesk.png" width="50%" />
+  <img src="screenshots/hardware/prodesk-exterior.png" width="49%" />
+  <img src="screenshots/hardware/interior-prodesk.png" width="49%" />
 </p>
 
 
