@@ -52,10 +52,5 @@ Nginx Proxy Manager (HTTPS)
 ![Listado de proxy hosts](../../screenshots/nginx-proxy-manager/hosts.png)
 *Listado de servicios publicados a través de Nginx Proxy Manager*
 
-## Problemas encontrados
 
-Al generar el certificado wildcard inicial tuve problemas de confianza del
-navegador porque el SAN (Subject Alternative Name) no incluía correctamente
-todos los subdominios necesarios. Tuve que regenerar el certificado con la CA
-interna, asegurándome de incluir el wildcard completo en el SAN.
 

@@ -142,4 +142,4 @@ CoreLab/
 - [ ] Homarr — dashboard 
 ---
 
-*Última actualización: 16/07/2026*
+*Última actualización: 19/07/2026*

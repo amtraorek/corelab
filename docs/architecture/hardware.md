@@ -40,4 +40,4 @@ La otra gran dificultad fue conseguir 32GB de RAM. Debido a la fuerte demanda de
 
 ---
 
-*Última actualización: 14/07/2026*
+*Última actualización: 19/07/2026*
