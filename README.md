@@ -36,8 +36,12 @@ que voy tomando por el camino.
 | Almacenamiento | ~440 GB NVMe |
 | Hipervisor | Proxmox VE 9.2 |
 
-![Hardware ATK CoreLab](screenshots/hardware/interior-prodesk.png )
-*HP ProDesk 600 G4 Mini corriendo Proxmox VE*
+<p align="center">
+  <img src="screenshots/hardware/prodesk-exterior.png" width="45%" />
+  <img src="screenshots/hardware/interior-prodesk.png" width="45%" />
+</p>
+
+
 
 ![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
 *Uso de recursos actual de todas las LXC*
