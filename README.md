@@ -114,32 +114,15 @@ CoreLab/
 - [x] BIND9 — DNS interno (`traore.home`)
 - [x] Nginx Proxy Manager — proxy inverso + HTTPS
 - [x] WireGuard — VPN (en el nodo Proxmox)
-- [ ] Headscale — VPN mesh de contigencia
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
-- [ ] Authelia
-- [ ] Wazuh
-- [ ] CrowdSec
-- [ ] Suricata
+
 
 ### 📊 Monitorización
 - [x] Uptime Kuma 
 - [x] Prometheus + Grafana 
-- [ ] ntfy — notificaciones push
 
-### ⚙️ Automatización
-- [ ] Ansible 
-- [ ] AWX 
-
-### 💾 Almacenamiento y multimedia
-- [ ] TrueNAS SCALE 
-- [ ] Nextcloud 
-- [ ] Immich 
-- [ ] Jellyfin 
-
-### 🖥️ Panel central
-- [ ] Homarr — dashboard 
 ---
 
 *Última actualización: 19/07/2026*
