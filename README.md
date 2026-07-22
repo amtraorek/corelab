@@ -122,7 +122,7 @@ CoreLab/
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
-- [] Authentik (En proceso)
+- [ ] Authentik (En proceso)
 
 ### 📊 Monitorización
 - [x] Uptime Kuma 
