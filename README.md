@@ -118,7 +118,7 @@ CoreLab/
 - [x] BIND9 — DNS interno (`traore.home`)
 - [x] Nginx Proxy Manager — proxy inverso + HTTPS
 - [x] WireGuard — VPN (en el nodo Proxmox)
-- [x] TailScale — VPN (contingencia)
+- [x] Tailscale — VPN (contingencia)
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
