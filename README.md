@@ -114,10 +114,10 @@ CoreLab/
 ## Roadmap
 
 ### 🌐 Red y acceso
-- [x] AdGuard Home — DNS + bloqueo de publicidad
+- [x] AdGuard Home
 - [x] BIND9 — DNS interno (`traore.home`)
-- [x] Nginx Proxy Manager — proxy inverso + HTTPS
-- [x] WireGuard — VPN (en el nodo Proxmox)
+- [x] Nginx Proxy Manager
+- [x] WireGuard — VPN 
 - [x] Tailscale — VPN (contingencia)
 
 ### 🔑 Identidad y seguridad
