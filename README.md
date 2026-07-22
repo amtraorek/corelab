@@ -13,6 +13,10 @@
 ![Vaultwarden](https://img.shields.io/badge/Vaultwarden-175DDC?style=flat&logo=vaultwarden&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![OpenMediaVault](https://img.shields.io/badge/OpenMediaVault-13BEF9?style=flat&logo=openmediavault&logoColor=white)
+![Immich](https://img.shields.io/badge/Immich-4250AF?style=flat&logo=immich&logoColor=white)
+![Nextcloud](https://img.shields.io/badge/Nextcloud-0082C9?style=flat&logo=nextcloud&logoColor=white)
+![Authentik](https://img.shields.io/badge/Authentik-FD4B2D?style=flat&logo=authentik&logoColor=white)
 ---
 
 ## ¿En que consiste?
@@ -114,15 +118,22 @@ CoreLab/
 - [x] BIND9 — DNS interno (`traore.home`)
 - [x] Nginx Proxy Manager — proxy inverso + HTTPS
 - [x] WireGuard — VPN (en el nodo Proxmox)
+- [x] TailScale — VPN (contingencia)
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
-
+- [~] Authentik
 
 ### 📊 Monitorización
 - [x] Uptime Kuma 
 - [x] Prometheus + Grafana 
 
+### 💾 Almacenamiento y multimedia
+- [X] OpenMediaVault
+- [x] Nextcloud 
+- [x] Immich 
+ 
+
 ---
 
-*Última actualización: 19/07/2026*
+*Última actualización: 22/07/2026*
