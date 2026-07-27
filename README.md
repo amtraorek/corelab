@@ -42,9 +42,9 @@ que voy tomando por el camino.
 | **Hipervisor** | Proxmox VE 9.2 |
 
 <p align="center">
-  <img src="screenshots/hardware/prodesk-exterior.png" width="33%" />
-  <img src="screenshots/hardware/interior-prodesk.png" width="33%" />
-    <img src="screenshots/hardware/discos-duros-prodesk.png" width="33%" />
+  <img src="screenshots/hardware/prodesk-exterior.png" width="32%" />
+  <img src="screenshots/hardware/interior-prodesk.png" width="32%" />
+    <img src="screenshots/hardware/discos-duros-prodesk.png" width="32%" />
 </p>
 
 
