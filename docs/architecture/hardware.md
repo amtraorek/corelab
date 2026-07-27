@@ -7,7 +7,8 @@
 | **Equipo** | HP ProDesk 600 G4 Mini |
 | **CPU** | Intel Core i7-8700T (6 núcleos / 12 hilos) |
 | **RAM** | 32 GB DDR4 3200MHz (2x16GB Dual Channel) |
-| **Almacenamiento** | ~512 GB NVMe Micron PCIe 3x4 |
+| **Almacenamiento Principal** | 512 GB NVMe Micron PCIe 3x4 |
+**Almacenamiento secundario** | 500 GB SSD Goldenfir + 480GB SSD Netac |
 | **Hipervisor** | Proxmox VE 9.2 |
 
 ## Por qué elegí este hardware
@@ -20,7 +21,6 @@ Reutilicé un NVMe que ya tenía para aprovechar la máxima velocidad posible co
 
 Elegí 32GB de RAM pensando en los distintos servicios que tengo previsto ir añadiendo a futuro, dejando margen de crecimiento.
 
-## Imágenes
 
 ## Imágenes
 
@@ -40,4 +40,4 @@ La otra gran dificultad fue conseguir 32GB de RAM. Debido a la fuerte demanda de
 
 ---
 
-*Última actualización: 19/07/2026*
+*Última actualización: 27/07/2026*

@@ -2,7 +2,7 @@
 
 ## Diagrama
 
-![Diagrama de arquitectura de red](../../screenshots/network/corelab-diagram.png)
+![Diagrama de arquitectura de red](../../screenshots/network/corelab-diagram-version1.png)
 
 ## Esquema de IPs
 
@@ -16,10 +16,15 @@
 | LXC 103 — Uptime Kuma | 192.168.1.103 | Monitorización de disponibilidad |
 | LXC 104 — Vaultwarden | 192.168.1.104 | Gestor de contraseñas |
 | LXC 105 — Prometheus + Grafana | 192.168.1.105 | Métricas y dashboards |
+| VM 106 — OpenMediaVault | 192.168.1.106 | NAS y almacenamiento |
+| LXC 107 — Immich | 192.168.1.107 | Gestión de fotos y vídeos |
+| LXC 108 — Nextcloud | 192.168.1.108 | Nube privada de archivos. |
+| LXC 109 — Proxmox Backup Server | 192.168.1.109 | Copias de seguridad de Proxmox. |
 
 ## Acceso remoto
 
 - **WireGuard VPN**, IP interna del túnel: `10.0.0.1`
+- **Tailscale VPN de contingencia**, IP interna del túnel: `100.100.1.1`
 - Acceso vía DDNS mediante el puerto 51280 (Estándar de Wireguard)
 - No se exponen puertos de servicios directamente a internet; todo el acceso remoto pasa por el túnel VPN
   <br>
@@ -50,8 +55,8 @@ Con un certificado propio, nos permite no tener que usar el DNS dinámico, y dar
 
 - **Red plana (192.168.1.x)** en vez de VLANs: 
 Principalmente por la simplicidad de configuración de red en un router no gestionado manualmente, como podría hacerse con software tipo OPNsense, entre otros. Además, al no tener una gran cantidad de dispositivos, resulta innecesario crear VLANs. Se permite que todos los dispositivos tengan acceso a todos los servicios.
-- **WireGuard** sobre otras VPN (Tailscale, OpenVPN):
-Se eligió WireGuard sobre alternativas como Tailscale principalmente para no depender de un proveedor externo y mantener control total sobre la VPN: gestión de claves, peers y túnel, todo alojado en el propio nodo Proxmox. La contrapartida es una configuración más manual, sin interfaz centralizada que tiene por ejemplo Tailscale, pero se prioriza la autonomía.
+- **WireGuard** sobre otras VPN (OpenVPN):
+Se eligió WireGuard sobre alternativas principalmente para no depender de un proveedor externo y mantener control total sobre la VPN: gestión de claves, peers y túnel, todo alojado en el propio nodo Proxmox. La contrapartida es una configuración más manual, sin interfaz centralizada que tiene por ejemplo Tailscale, pero se prioriza la autonomía.
 - **Nginx Proxy Manager + BIND9**: Utilizamos Nginx Proxy Manager para la gestión de certificados propios, y lo combinamos con BIND9 para la resolución de nombres interna.
 
 ## Problemas encontrados
@@ -82,6 +87,6 @@ Accediendo directamente por IP (`192.168.1.90:8006`) la consola sí funcionaba, 
 
 ---
 
-*Última actualización: 17/07/2026*
+*Última actualización: 27/07/2026*
 
 
