@@ -1,4 +1,4 @@
-# ATK CoreLab
+# CoreLab
 
 > Infraestructura personal de homelab — Proxmox, servicios autoalojados, monitorización y seguridad.
 
@@ -16,7 +16,7 @@
 ![OpenMediaVault](https://img.shields.io/badge/OpenMediaVault-13BEF9?style=flat&logo=openmediavault&logoColor=white)
 ![Immich](https://img.shields.io/badge/Immich-4250AF?style=flat&logo=immich&logoColor=white)
 ![Nextcloud](https://img.shields.io/badge/Nextcloud-0082C9?style=flat&logo=nextcloud&logoColor=white)
-![Authentik](https://img.shields.io/badge/Authentik-FD4B2D?style=flat&logo=authentik&logoColor=white)
+![Proxmox Backup Server](https://img.shields.io/badge/Proxmox_Backup_Server-E57000?style=flat&logo=proxmox&logoColor=white)
 ---
 
 ## ¿En que consiste?
@@ -34,11 +34,12 @@ que voy tomando por el camino.
 
 | Componente | Detalle |
 |---|---|
-| Equipo | HP ProDesk 600 G4 Mini |
-| CPU | Intel Core i7-8700T |
-| RAM | 32 GB DDR4 |
-| Almacenamiento | ~440 GB NVMe |
-| Hipervisor | Proxmox VE 9.2 |
+| **Equipo** | HP ProDesk 600 G4 Mini |
+| **CPU** | Intel Core i7-8700T (6 núcleos / 12 hilos) |
+| **RAM** | 32 GB DDR4 3200MHz (2x16GB Dual Channel) |
+| **Almacenamiento Principal** | 512 GB NVMe Micron PCIe 3x4 |
+**Almacenamiento secundario** | 500 GB SSD Goldenfir + 480GB SSD Netac |
+| **Hipervisor** | Proxmox VE 9.2 |
 
 <p align="center">
   <img src="screenshots/hardware/prodesk-exterior.png" width="49%" />
