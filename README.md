@@ -105,7 +105,9 @@ CoreLab/
 │   ├── nginx-proxy-manager/
 │   ├── uptime-kuma/
 │   ├── vaultwarden/
-│   └── prometheus-grafana/
+│   ├── prometheus-grafana/
+│   ├── immich/
+│   └── nextcloud/
 └── LICENSE
 ```
 
@@ -122,7 +124,6 @@ CoreLab/
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
-- [ ] Authentik (En proceso)
 
 ### 📊 Monitorización
 - [x] Uptime Kuma 
@@ -136,4 +137,4 @@ CoreLab/
 
 ---
 
-*Última actualización: 22/07/2026*
+*Última actualización: 27/07/2026*
