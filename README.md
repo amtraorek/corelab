@@ -56,7 +56,7 @@ que voy tomando por el camino.
 
 ## Arquitectura
 
-![Diagrama](screenshots/network/corelab-diagram-version1.png)
+![Diagrama](screenshots/network/corelab-diagram-version2.png)
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
