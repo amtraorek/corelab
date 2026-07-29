@@ -2,7 +2,7 @@
 
 > Infraestructura personal de homelab — Proxmox, servicios autoalojados, monitorización y seguridad.
 
-**Estado:** 🟢 Activo — desarrollo continuo
+> **Estado:** 🟢 Activo — desarrollo continuo
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat&logo=proxmox&logoColor=white)
@@ -19,14 +19,20 @@
 ![Proxmox Backup Server](https://img.shields.io/badge/Proxmox_Backup_Server-E57000?style=flat&logo=proxmox&logoColor=white)
 ---
 
-## ¿En que consiste?
+## Descripción
 
-CoreLab es mi homelab personal, donde diseño, despliego y mantengo una
-infraestructura self-hosted (local) sobre mi propio hardware. El objetivo es construir
-infraestructura real cubriendo administración de
-sistemas, redes, monitorización y seguridad — documentando cada decisión
-que voy tomando por el camino.
+CoreLab es mi homelab personal, donde diseño, despliego y mantengo una infraestructura self-hosted sobre mi propio hardware. Su objetivo es construir un entorno real para aprender y experimentar con administración de sistemas, redes, monitorización y seguridad, documentando cada decisión técnica y la integración de todos los servicios.
 
+
+---
+
+## Índice
+
+- [Hardware](#hardware)
+- [Arquitectura](#arquitectura)
+- [Servicios desplegados](#servicios-desplegados)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Roadmap](#roadmap)
 
 ---
 
@@ -38,7 +44,7 @@ que voy tomando por el camino.
 | **CPU** | Intel Core i7-8700T (6 núcleos / 12 hilos) |
 | **RAM** | 32 GB DDR4 3200MHz (2x16GB Dual Channel) |
 | **Almacenamiento Principal** | 512 GB NVMe Micron PCIe 3x4 |
-**Almacenamiento secundario** | 500 GB SSD Goldenfir + 480GB SSD Netac |
+| **Almacenamiento secundario** | 500 GB SSD Goldenfir + 480 GB SSD Netac |
 | **Hipervisor** | Proxmox VE 9.2 |
 
 <p align="center">
@@ -50,8 +56,20 @@ que voy tomando por el camino.
 
 
 ![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
-*Uso de recursos actual de todas las LXC*
+*Resumen del hipervisor*
 
+---
+## Infraestructura
+
+- **1 nodo Proxmox VE**
+- **8 contenedores LXC**
+- **2 máquinas virtuales**
+- **10 servicios desplegados**
+- **2 pools de almacenamiento (storage y backup)**
+- **Backups diarios mediante Proxmox Backup Server**
+
+![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
+>Resumen del hipervisor
 ---
 
 ## Arquitectura
@@ -66,20 +84,20 @@ Más detalle en [`docs/architecture/network.md`](docs/architecture/network.md).
 
 ---
 
-## Servicios actuales
+## Servicios desplegados
 
 | Servicio | Función | Estado |
 |---|---|---|
-| AdGuard Home | DNS y bloqueo de publicidad/trackers | ✅ |
-| BIND9 | Resolución DNS interna (`traore.home`) | ✅ |
-| Nginx Proxy Manager | Proxy inverso y gestión de HTTPS | ✅ |
-| Uptime Kuma | Monitorización de disponibilidad | ✅ |
-| Vaultwarden | Gestor de contraseñas autoalojado | ✅ |
-| Prometheus + Grafana | Monitorización de métricas y dashboards | ✅ |
-| OpenMediaVault | Almacenamiento NAS centralizado (SMB/NFS) | ✅ |
-| Immich | Gestión y copia de seguridad de fotografías | ✅ |
-| Nextcloud | Almacenamiento y sincronización de archivos | ✅ |
-| Proxmox Backup Server | Backups incrementales con deduplicación | ✅ |
+| [AdGuard Home](docs/services/adguard.md) | DNS y bloqueo de publicidad/trackers | ✅ |
+| [BIND9](docs/services/bind9.md) | Resolución DNS interna (`traore.home`) | ✅ |
+| [Nginx Proxy Manager](docs/services/nginx-proxy-manager.md) | Proxy inverso y gestión de HTTPS | ✅ |
+| [Uptime Kuma](docs/services/uptime-kuma.md) | Monitorización de disponibilidad | ✅ |
+| [Vaultwarden](docs/services/vaultwarden.md) | Gestor de contraseñas autoalojado | ✅ |
+| [Prometheus + Grafana](docs/services/prometheus-grafana.md) | Monitorización de métricas y dashboards | ✅ |
+| [OpenMediaVault](docs/services/openmediavault.md) | Almacenamiento NAS centralizado (SMB/NFS) | ✅ |
+| [Immich](docs/services/immich.md) | Gestión y copia de seguridad de fotografías | ✅ |
+| [Nextcloud](docs/services/nextcloud.md) | Almacenamiento y sincronización de archivos | ✅ |
+| [Proxmox Backup Server](docs/services/proxmox-backup-server.md) | Backups incrementales con deduplicación | ✅ |
 
 Cada servicio tiene su propia documentación en [`docs/services/`](docs/services/),
 explicando por qué se eligió, cómo se integra con el resto del laboratorio, y
@@ -143,7 +161,7 @@ CoreLab/
 - [ ] Authentik
 
 ### 💾 Almacenamiento y multimedia
-- [X] OpenMediaVault
+- [x] OpenMediaVault
 - [x] Nextcloud 
 - [x] Immich 
 - [x] Proxmox Backup Server
@@ -151,4 +169,4 @@ CoreLab/
 
 ---
 
-*Última actualización: 29/07/2026*
+**Última actualización:** 29/07/2026
