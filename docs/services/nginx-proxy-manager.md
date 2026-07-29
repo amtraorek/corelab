@@ -1,19 +1,19 @@
 # Nginx Proxy Manager
 
-## ¿Qué es?
+## Descripción
 
 Nginx Proxy Manager (NPM) es un proxy inverso con interfaz web que gestiona
 el acceso a todos los servicios de mi homelab a través de un único punto
 de entrada, aplicando HTTPS (TLS) a cada uno de ellos para que tengan seguridad.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Lo elegí por encima de configurar Nginx manualmente, porque ofrece una interfaz web
 sencilla para gestionar certificados y hosts proxy, sin tener que editar
 ficheros de configuración manualmente cada vez que añado un servicio nuevo o un acceso web.
 En el moemnto de añadir un nuevo servicio con seguridad cifrada, con NPM se hace mucho mas intuïtivo, y mucho mas ràpido minimizando errores al hacer--lo manualmente.
 
-## Cómo encaja en mi infraestructura
+## Integración en la infraestructura
 
 - Desplegado en LXC 102 (Debian 12)
 - Es el punto de entrada para acceder a todos los servicios mediante
@@ -41,7 +41,7 @@ Nginx Proxy Manager (HTTPS)
        └── ...
 ```
 
-## Configuración relevante
+## Configuración 
 
 - **Certificado:** wildcard autofirmado (`*.traore.home`), emitido por una CA interna propia
 - **Force SSL:** activado en todos los proxy hosts.

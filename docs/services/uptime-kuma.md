@@ -1,19 +1,19 @@
 # Uptime Kuma
 
-## ¿Qué es?
+## Descripción
 
 Uptime Kuma es una herramienta de monitorización de disponibilidad que
 comprueba periódicamente si los servicios están activos y accesibles, con la posibilidad de avisar cuando alguno se cae (mediante Telegram).
 
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Lo elegí porque es una herramienta ligera, con interfaz web muy clara, y
 pensada específicamente para la monitorización de disponibilidad , a
 diferencia de Prometheus + Grafana, que está más orientado a métricas de
 rendimiento (CPU, RAM, disco). Uptime Kuma, es una herramienta mucho mas sencilla que la principal utilidad es si se encuentran disponibles los servicios.
 
-## Cómo encaja en mi infraestructura
+## Integración en la infraestructura
 
 - Desplegado en LXC 103 (Debian 12)
 - Monitoriza cada servicio del laboratorio mediante comprobaciones HTTP(S)
@@ -21,7 +21,7 @@ rendimiento (CPU, RAM, disco). Uptime Kuma, es una herramienta mucho mas sencill
 - Complementa a Prometheus + Grafana
 - Accesible en `uptime.traore.home` vía Nginx Proxy Manager (HTTPS)
 
-## Configuración relevante
+## Configuración 
 
 - **Monitores configurados:** uno por cada servicio activo del laboratorio
   (AdGuard Home, BIND9, Nginx Proxy Manager, Vaultwarden, Prometheus/Grafana)

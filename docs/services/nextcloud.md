@@ -1,14 +1,14 @@
 # Nextcloud
 
-## ¿Qué es?
+## Descripción
 
 Nextcloud es una plataforma self-hosted de almacenamiento y sincronización de archivos, pensada como alternativa a Google Drive. La utilizo para centralizar mis archivos y dejar de depender de servicios de terceros.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Buscaba una alternativa self-hosted a Google Drive que permitiera sincronización multiplataforma, edición colaborativa de documentos y control total sobre mis datos. El objetivo final es migrar todo mi Google Drive a Nextcloud y borrar el contenido de Drive.
 
-## Cómo encaja en la infraestructura
+## Integración en la infraestructura
 
 - Desplegado en LXC 108 (hostname `nextcloud`), en modo **privilegiada** con nesting/keyctl activados, necesario para que funcionara el mount CIFS del share NAS junto con Docker.
 
@@ -30,7 +30,7 @@ Dispositivos (web/desktop/móvil)
                                         └── office.traore.home ──► collabora (Docker, root_nextcloud-net)
 ```
 
-## Configuración relevante
+## Configuración 
 
 - **LXC:** 108, privilegiada, nesting/keyctl activados
 - **Contenedores:** nextcloud-app, nextcloud-redis (redis:alpine), nextcloud-db (mariadb:10.11), puerto 8080
@@ -39,7 +39,7 @@ Dispositivos (web/desktop/móvil)
 ![Integración de Collabora](../../screenshots/nextcloud/collabora-integracion.png)
 - **Almacenamiento:** share SMB `nextcloud` sobre pool ZFS `storage`
 
-## Problemas y soluciones
+## Incidencias y soluciones
 
 - **CODE embebido (richdocumentscode) descartado:** fallaba por problemas de socket dentro de Docker. Se optó por un contenedor Collabora Online separado, que sí funcionó.
 - **Mount CIFS no persistente:** el share SMB del NAS no estaba en `/etc/fstab`, así que no sobrevivía a reinicios de la LXC. Esto causaba el error "carpeta de datos inválida" al perderse el mount. Solución definitiva pendiente: añadir la entrada a fstab con `_netdev`. (Ver documentación de error compartida con Immich, que presenta el mismo problema.)

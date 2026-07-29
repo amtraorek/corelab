@@ -1,13 +1,13 @@
 # Immich 
 
-## ¿Qué es?
+## Descripción
 
 Immich es una plataforma self-hosted de gestión y backup de fotos y vídeos, pensada como alternativa a Google Photos. La utilizo para centralizar las fotos de casa y dejar de depender de servicios de terceros.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Buscaba una alternativa self-hosted a Google Photos que permitiera subida automática desde móvil, dependiendo de mi hardware y poder más capacidad de almacenamiento.
-## Cómo encaja en la infraestructura
+## Integración en la infraestructura
 
 - Desplegado en LXC 107, ampliada a 16GB RAM para soportar la subida masiva de fotos
 - Almacenamiento en el pool ZFS `storage` de OpenMediavault (VM 106, `nas.traore.home`), a través del share compartido `immich`
@@ -22,7 +22,7 @@ Dispositivos (móvil/web)
                                      └── share SMB `immich` ──► pool ZFS `storage` (NAS, VM 106)
 ```
 
-## Configuración relevante
+## Configuración 
 - **Despliegue:** Despliegue dentro del contenedor, en Docker.
 
  ![Contenedores depslegados con docker](../../screenshots/immich/docker-containers.png)
@@ -30,7 +30,7 @@ Dispositivos (móvil/web)
 - **Almacenamiento:** share SMB `immich` sobre pool ZFS `storage`
 - **Acceso:** red interna + WireGuard
 
-## Problemas encontrados
+## Incidencias encontradas
 
 ### Mount CIFS no persistente causa 502 en Immich y Nextcloud
  

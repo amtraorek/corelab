@@ -1,16 +1,16 @@
 # AdGuard Home
 
-## ¿Qué es?
+## Descripción
 
 
 Servidor DNS que bloquea publicidad, rastreadores y dominios maliciosos a nivel de red. Todos los dispositivos de la red pasan por aquí para resolver dominios, así que el filtrado se aplica sin tener que tocar nada en cada dispositivo por separado.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Valoré Pi-hole primero, que es la opción más conocida y la que más se recomienda. Finalmente elegí AdGuard Home por dos motivos: la interfaz es más moderna, y trae soporte nativo para DNS-over-HTTPS/DoT sin depender de plugins adicionales. Tampoco necesita `dnsmasq` como Pi-hole, lo que hizo más sencilla la integración con mi DNS interno (BIND9)
 
 
-## Cómo encaja en la infraestructura
+## Integración en la infraestructura
 
 Funciona en el LXC 100 (Debian 12) y actúa como DNS primario de la red. Está configurado directamente en el router de mi ISP, así que todos los dispositivos que se conectan a la red lo usan automáticamente, sin tener que tocar la configuración de cada uno por separado.
  ![Configuración de DNS](../../screenshots/network/router-configuration.png)

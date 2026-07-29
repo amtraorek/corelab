@@ -19,7 +19,7 @@
 | VM 106 — OpenMediaVault | 192.168.1.106 | NAS y almacenamiento |
 | LXC 107 — Immich | 192.168.1.107 | Gestión de fotos y vídeos |
 | LXC 108 — Nextcloud | 192.168.1.108 | Nube privada de archivos. |
-| LXC 109 — Proxmox Backup Server | 192.168.1.109 | Copias de seguridad de Proxmox. |
+| VM 109 — Proxmox Backup Server | 192.168.1.109 | Copias de seguridad de Proxmox. |
 
 ## Acceso remoto
 

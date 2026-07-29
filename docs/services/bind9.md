@@ -1,15 +1,16 @@
 # BIND9
 
-## ¿Qué es?
+## Descripción
 
 BIND9 es un servidor DNS que utilizo para resolver el dominio interno de mi
 homelab (`traore.home`), asignando nombres a cada uno de mis servicios en
 lugar de tener que recordar las direcciones IP y sus puertos.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Ya tenía experiencia previa con BIND9, así que fue una elección bastante directa. Además es el servidor DNS más extendido a nivel profesional para gestionar zonas propias, con años de uso en producción en todo tipo de entornos (desde redes pequeñas hasta ISPs) y muchísima documentación disponible. También quería aprovechar para manejar una zona DNS real, en vez de quedarme solo con las reglas de reescritura simples que ofrece AdGuard Home.
-## Cómo encaja en la infraestructura
+
+## Integración en la infraestructura
 
 - Desplegado en LXC 101 (Debian 12)
 - Gestiona la zona interna `traore.home`
@@ -26,7 +27,7 @@ AdGuard Home
      └── resto de dominios → Quad9 (Internet)
 ```
 
-## Configuración relevante
+## Configuración 
 
 - **Zona gestionada:** `traore.home`
 - **Registros:** un registro A por cada servicio desplegado, apuntando a la IP de su LXC correspondiente

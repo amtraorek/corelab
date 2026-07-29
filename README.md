@@ -98,7 +98,11 @@ CoreLab/
 │       ├── nginx-proxy-manager.md
 │       ├── uptime-kuma.md
 │       ├── vaultwarden.md
-│       └── prometheus-grafana.md
+│       ├── prometheus-grafana.md
+│       ├── immich.md
+│       ├── nextcloud.md
+│       ├── openmediavault.md
+│       └── proxmox-backup-server.md
 ├── screenshots/
 │   ├── hardware/
 │   ├── network/
@@ -109,7 +113,9 @@ CoreLab/
 │   ├── vaultwarden/
 │   ├── prometheus-grafana/
 │   ├── immich/
-│   └── nextcloud/
+│   ├── nextcloud/
+│   ├── openmediavault/
+│   └── proxmox-backup-server/
 └── LICENSE
 ```
 
@@ -135,8 +141,9 @@ CoreLab/
 - [X] OpenMediaVault
 - [x] Nextcloud 
 - [x] Immich 
+- [x] Proxmox Backup Server
  
 
 ---
 
-*Última actualización: 27/07/2026*
+*Última actualización: 29/07/2026*

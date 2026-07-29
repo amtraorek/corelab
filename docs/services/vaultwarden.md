@@ -1,12 +1,12 @@
 # Vaultwarden
 
-## ¿Qué es?
+## Descripción
 
 Vaultwarden es un gestor de contraseñas, más ligero que Bitwarden. Permite almacenar y sincronizar
 credenciales de forma cifrada entre dispositivos, sin depender de un
 proveedor externo y tu desde manera local.
 
-## ¿Por qué lo elegí?
+## Objetivo
 
 Me permite tener un gestor de contraseñas centralizado tanto para mi propio uso como
 para compartir credenciales de forma segura con mi familia, sin depender de
@@ -15,7 +15,7 @@ me permite tener control total sobre dónde se almacenan los datos, además de
 ser mucho más ligero que el servidor oficial de Bitwarden,
 lo cual encaja bien para gastar recursos en otros servicios..
 
-## Cómo encaja en mi infraestructura
+## Integración en la infraestructura
 
 Està desplegado en la LXC 104 (192.168.1.104), corriendo como contenedor
 **Docker** dentro de la propia LXC — a diferencia de servicios como AdGuard
@@ -31,7 +31,7 @@ Para compartir credenciales con mi familia sin dar acceso a la bóveda
 completa, configuré una estructura de **organización + collections**, que
 permite un control granular de qué credenciales ve cada miembro.
 
-## Configuración importante
+## Configuración 
 
 - **Acceso:** `vault.traore.home` (HTTPS vía Nginx Proxy Manager)
 - **Certificado:** CA interna instalada manualmente en Android y mediante

@@ -1,12 +1,12 @@
 # Prometheus + Grafana
 
-## ¿Qué es?
+## Descripción
 
 Prometheus es un sistema de monitorización que recolecta y almacena datos
 (CPU, RAM, disco, red...) de los servidores de mi infraestructura. Grafana se
 conecta a esos datos y los consigue transformar en dashboards visuales, permitiendo visualizar el estado de cada servidor con sus mètricas correspondientes.
 
-## ¿Por qué lo elegí?
+## Objetivo
 Uno de los principales dilemas a la hora del monitoraje fue elegir la herramienta correcta. Lo elegí principalmente por encima de **Zabbix** porque actualmente es la
 herramienta más usada para monitorización en entornos cloud y Kubernetes,
 tecnologías que están muy demandas a día de hoy. Tambíen cuenta con más soporte y una
@@ -14,7 +14,7 @@ comunidad más activa que esta en crecimiento, lo que también facilita encontra
 documentación y resolver problemas. 
 
 
-## Cómo encaja en mi infraestructura
+## Integración en la infraestructura
 
 Desplegado en la LXC 105 (Debian 12), junto a los tres componentes del stack:
 
@@ -31,7 +31,7 @@ resto de servicios del homelab.
 
 Actualmente monitoriza únicamente la propia LXC 105 mediante Node Exporter, y el nodo prinicpal `server`; aún falta añadir Node Exporter al resto de LXCs para tener visibilidad de toda la infraestructura, y un exporter específico para el propio nodo Proxmox (PVE Exporter).
 
-## Configuración importante
+## Configuración 
 
 - **Dashboard importado:** [Node Exporter Full (ID 1860)](https://grafana.com/grafana/dashboards/1860),
   el dashboard de referencia de la comunidad para visualizar métricas de
