@@ -2,7 +2,7 @@
 
 > Infraestructura personal de homelab — Proxmox, servicios autoalojados, monitorización y seguridad.
 
-**Estado:** 🟡 En progreso — iniciado el 01/07/2026
+**Estado:** 🟢 Activo — desarrollo continuo
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat&logo=proxmox&logoColor=white)
@@ -70,12 +70,16 @@ Más detalle en [`docs/architecture/network.md`](docs/architecture/network.md).
 
 | Servicio | Función | Estado |
 |---|---|---|
-| AdGuard Home | DNS + bloqueo de publicidad/trackers | ✅ |
+| AdGuard Home | DNS y bloqueo de publicidad/trackers | ✅ |
 | BIND9 | Resolución DNS interna (`traore.home`) | ✅ |
-| Nginx Proxy Manager | Proxy inverso + HTTPS | ✅ |
+| Nginx Proxy Manager | Proxy inverso y gestión de HTTPS | ✅ |
 | Uptime Kuma | Monitorización de disponibilidad | ✅ |
 | Vaultwarden | Gestor de contraseñas autoalojado | ✅ |
-| Prometheus + Grafana | Métricas y dashboards | ✅ |
+| Prometheus + Grafana | Monitorización de métricas y dashboards | ✅ |
+| OpenMediaVault | Almacenamiento NAS centralizado (SMB/NFS) | ✅ |
+| Immich | Gestión y copia de seguridad de fotografías | ✅ |
+| Nextcloud | Almacenamiento y sincronización de archivos | ✅ |
+| Proxmox Backup Server | Backups incrementales con deduplicación | ✅ |
 
 Cada servicio tiene su propia documentación en [`docs/services/`](docs/services/),
 explicando por qué se eligió, cómo se integra con el resto del laboratorio, y
@@ -136,6 +140,7 @@ CoreLab/
 ### 📊 Monitorización
 - [x] Uptime Kuma 
 - [x] Prometheus + Grafana 
+- [ ] Authentik
 
 ### 💾 Almacenamiento y multimedia
 - [X] OpenMediaVault
