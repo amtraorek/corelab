@@ -43,6 +43,6 @@ Actualmente monitoriza únicamente la propia LXC 105 mediante Node Exporter, y e
 ## Ejemplos
 
 ![Dashboard de Node Exporter Full en Grafana](../../screenshots/prometheus-grafana/dashboard.png)
-*Dashboard "Node Exporter Full" mostrando CPU, RAM, disco y red en tiempo real*
+*Dashboard "Proxmox via Prometheus" mostrando recursos utilizados por cada contenedor (LXC) y máquina virtual (VM/qemu)*
 
 #
