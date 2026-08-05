@@ -169,4 +169,4 @@ CoreLab/
 
 ---
 
-**Última actualización:** 29/07/2026
+**Última actualización:** 05/08/2026
