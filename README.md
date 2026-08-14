@@ -151,6 +151,7 @@ CoreLab/
 - [x] Nginx Proxy Manager
 - [x] WireGuard — VPN 
 - [x] Tailscale — VPN (contingencia)
+- [ ] OPNsense - Firewall y Router 
 
 ### 🔑 Identidad y seguridad
 - [x] Vaultwarden
@@ -158,7 +159,6 @@ CoreLab/
 ### 📊 Monitorización
 - [x] Uptime Kuma 
 - [x] Prometheus + Grafana 
-- [ ] Authentik
 
 ### 💾 Almacenamiento y multimedia
 - [x] OpenMediaVault
