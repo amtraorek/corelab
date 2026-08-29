@@ -169,4 +169,18 @@ CoreLab/
 
 ---
 
+<div align="center">
+
 **Última actualización:** 29/08/2026
+
+---
+
+### Author
+
+**Amadou Traore Keita**
+
+SMR Technician · IT Infrastructure · Systems Administration
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-amtraorek-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amtraorek/) [![Email](https://img.shields.io/badge/Email-amtraorek-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:amtraorek@gmail.com)
+
+</div>
