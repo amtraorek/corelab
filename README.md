@@ -145,7 +145,7 @@ CoreLab/
 
 ## Roadmap
 
-### 🌐 Red y acceso
+###  Red y acceso
 - [x] AdGuard Home
 - [x] BIND9 — DNS interno (`traore.home`)
 - [x] Nginx Proxy Manager
@@ -153,14 +153,14 @@ CoreLab/
 - [x] Tailscale — VPN (contingencia)
 - [ ] OPNsense - Firewall y Router 
 
-### 🔑 Identidad y seguridad
+###  Identidad y seguridad
 - [x] Vaultwarden
 
-### 📊 Monitorización
+###  Monitorización
 - [x] Uptime Kuma 
 - [x] Prometheus + Grafana 
 
-### 💾 Almacenamiento y multimedia
+###  Almacenamiento y multimedia
 - [x] OpenMediaVault
 - [x] Nextcloud 
 - [x] Immich 
@@ -169,4 +169,4 @@ CoreLab/
 
 ---
 
-**Última actualización:** 15/08/2026
+**Última actualización:** 29/08/2026
