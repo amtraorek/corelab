@@ -61,20 +61,22 @@ CoreLab es mi homelab personal, donde diseño, despliego y mantengo una infraest
 ---
 ## Infraestructura
 
+
 - **1 nodo Proxmox VE**
-- **8 contenedores LXC**
-- **2 máquinas virtuales**
-- **10 servicios desplegados**
+- **12 contenedores LXC**
+- **3 máquinas virtuales**
+- **16 servicios desplegados** (12 completados, 4 en proceso)
 - **2 pools de almacenamiento (storage y backup)**
 - **Backups diarios mediante Proxmox Backup Server**
 
-![Resumen Proxmox](screenshots/hardware/proxmox-overview.png)
+![Resumen Proxmox](screenshots/hardware/proxmox-services.png)
 >Resumen del hipervisor
 ---
 
 ## Arquitectura
 
 ![Diagrama](screenshots/network/corelab-diagram-version2.png)
+>   Por actualizar
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
@@ -91,13 +93,19 @@ Más detalle en [`docs/architecture/network.md`](docs/architecture/network.md).
 | [AdGuard Home](docs/services/adguard.md) | DNS y bloqueo de publicidad/trackers | ✅ |
 | [BIND9](docs/services/bind9.md) | Resolución DNS interna (`traore.home`) | ✅ |
 | [Nginx Proxy Manager](docs/services/nginx-proxy-manager.md) | Proxy inverso y gestión de HTTPS | ✅ |
+| [WireGuard](docs/services/wireguard.md) | VPN de acceso remoto principal | 🔄 |
+| [Tailscale](docs/services/tailscale.md) | VPN mesh de contingencia | ✅ |
+| [OPNsense](docs/services/opnsense.md) | Firewall y router inter-VLAN | 🔄 |
 | [Uptime Kuma](docs/services/uptime-kuma.md) | Monitorización de disponibilidad | ✅ |
 | [Vaultwarden](docs/services/vaultwarden.md) | Gestor de contraseñas autoalojado | ✅ |
 | [Prometheus + Grafana](docs/services/prometheus-grafana.md) | Monitorización de métricas y dashboards | ✅ |
+| [Speedtest Tracker](docs/services/speedtest.md) | Monitorización de velocidad de red | ✅ |
 | [OpenMediaVault](docs/services/openmediavault.md) | Almacenamiento NAS centralizado (SMB/NFS) | ✅ |
 | [Immich](docs/services/immich.md) | Gestión y copia de seguridad de fotografías | ✅ |
 | [Nextcloud](docs/services/nextcloud.md) | Almacenamiento y sincronización de archivos | ✅ |
 | [Proxmox Backup Server](docs/services/proxmox-backup-server.md) | Backups incrementales con deduplicación | ✅ |
+| [Homarr](docs/services/homarr.md) | Panel de inicio centralizado | 🔄 |
+| [ntfy](docs/services/ntfy.md) | Notificaciones push | 🔄 |
 
 Cada servicio tiene su propia documentación en [`docs/services/`](docs/services/),
 explicando por qué se eligió, cómo se integra con el resto del laboratorio, y
@@ -124,7 +132,8 @@ CoreLab/
 │       ├── immich.md
 │       ├── nextcloud.md
 │       ├── openmediavault.md
-│       └── proxmox-backup-server.md
+│       ├── proxmox-backup-server.md
+│       └── tailscale.md
 ├── screenshots/
 │   ├── hardware/
 │   ├── network/
@@ -137,42 +146,45 @@ CoreLab/
 │   ├── immich/
 │   ├── nextcloud/
 │   ├── openmediavault/
-│   └── proxmox-backup-server/
+│   ├── proxmox-backup-server/
+│   ├── tailscale/
+│   ├── opnsense/
+│   └── speedtest/
 └── LICENSE
 ```
 
 ---
 
 ## Roadmap
-
-###  Red y acceso
+ 
+### Red y acceso
 - [x] AdGuard Home
 - [x] BIND9 — DNS interno (`traore.home`)
 - [x] Nginx Proxy Manager
-- [x] WireGuard — VPN 
+- [x] WireGuard — VPN
 - [x] Tailscale — VPN (contingencia)
-- [x] OPNsense - Firewall y Router 
-
-###  Identidad y seguridad
+- [x] OPNsense — Firewall y Router
+### Identidad y seguridad
 - [x] Vaultwarden
-
-###  Monitorización
-- [x] Uptime Kuma 
-- [x] Prometheus + Grafana 
+### Monitorización
+- [x] Uptime Kuma
+- [x] Prometheus + Grafana
 - [x] Speedtest Tracker
-
-###  Almacenamiento y multimedia
+- [ ] Ntfy
+### Almacenamiento y multimedia
 - [x] OpenMediaVault
-- [x] Nextcloud 
-- [x] Immich 
+- [x] Nextcloud
+- [x] Immich
 - [x] Proxmox Backup Server
- 
+### Paneles
+- [ ] Homarr
+
 
 ---
 
 <div align="center">
 
-**Última actualización:** 14/09/2026
+**Última actualización:** 17/09/2026
 
 ---
 
