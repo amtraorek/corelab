@@ -9,14 +9,20 @@
 ![AdGuard Home](https://img.shields.io/badge/AdGuard_Home-68BC71?style=flat&logo=adguard&logoColor=white)
 ![BIND9](https://img.shields.io/badge/BIND9-CB2D2D?style=flat)
 ![NPM](https://img.shields.io/badge/Nginx_Proxy_Manager-269639?style=flat&logo=nginxproxymanager&logoColor=white)
+![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white)
+![Tailscale](https://img.shields.io/badge/Tailscale-242424?style=flat&logo=tailscale&logoColor=white)
+![OPNsense](https://img.shields.io/badge/OPNsense-D94F00?style=flat&logo=opnsense&logoColor=white)
 ![Uptime Kuma](https://img.shields.io/badge/Uptime_Kuma-5CDD8B?style=flat&logo=uptimekuma&logoColor=white)
 ![Vaultwarden](https://img.shields.io/badge/Vaultwarden-175DDC?style=flat&logo=vaultwarden&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![Speedtest Tracker](https://img.shields.io/badge/Speedtest_Tracker-2E8B57?style=flat&logo=speedtest&logoColor=white)
 ![OpenMediaVault](https://img.shields.io/badge/OpenMediaVault-13BEF9?style=flat&logo=openmediavault&logoColor=white)
 ![Immich](https://img.shields.io/badge/Immich-4250AF?style=flat&logo=immich&logoColor=white)
 ![Nextcloud](https://img.shields.io/badge/Nextcloud-0082C9?style=flat&logo=nextcloud&logoColor=white)
 ![Proxmox Backup Server](https://img.shields.io/badge/Proxmox_Backup_Server-E57000?style=flat&logo=proxmox&logoColor=white)
+![Homarr](https://img.shields.io/badge/Homarr-0F0F0F?style=flat&logo=homarr&logoColor=white)
+![ntfy](https://img.shields.io/badge/ntfy-478FCF?style=flat&logo=ntfy&logoColor=white)
 ---
 
 ## Descripción
