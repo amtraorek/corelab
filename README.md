@@ -81,8 +81,8 @@ CoreLab es mi homelab personal, donde diseño, despliego y mantengo una infraest
 
 ## Arquitectura
 
-![Diagrama](screenshots/network/corelab-diagram-version2.png)
->   Por actualizar
+![Diagrama](screenshots/network/corelab-diagram-version3.png)
+>Estado Actual
 
 Todos los servicios están detrás de un dominio interno (`traore.home`) con
 certificado wildcard autofirmado, resuelto localmente mediante AdGuard Home +
@@ -190,7 +190,7 @@ CoreLab/
 
 <div align="center">
 
-**Última actualización:** 17/09/2026
+**Última actualización:** 25/09/2026
 
 ---
 
