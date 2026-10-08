@@ -99,7 +99,7 @@ Más detalle en [`docs/architecture/network.md`](docs/architecture/network.md).
 | [AdGuard Home](docs/services/adguard.md) | DNS y bloqueo de publicidad/trackers | ✅ |
 | [BIND9](docs/services/bind9.md) | Resolución DNS interna (`traore.home`) | ✅ |
 | [Nginx Proxy Manager](docs/services/nginx-proxy-manager.md) | Proxy inverso y gestión de HTTPS | ✅ |
-| [WireGuard](docs/services/wireguard.md) | VPN de acceso remoto principal | 🔄 |
+| [WireGuard](docs/services/wireguard.md) | VPN de acceso remoto principal | ✅ |
 | [Tailscale](docs/services/tailscale.md) | VPN mesh de contingencia | ✅ |
 | [OPNsense](docs/services/opnsense.md) | Firewall y router inter-VLAN | 🔄 |
 | [Uptime Kuma](docs/services/uptime-kuma.md) | Monitorización de disponibilidad | ✅ |
@@ -139,7 +139,12 @@ CoreLab/
 │       ├── nextcloud.md
 │       ├── openmediavault.md
 │       ├── proxmox-backup-server.md
-│       └── tailscale.md
+│       ├── tailscale.md
+│       ├── opnsense.md
+│       ├── wireguard.md
+│       ├── speedtest.md
+│       ├── ntfy.md
+│       └── homarr.md
 ├── screenshots/
 │   ├── hardware/
 │   ├── network/
@@ -190,7 +195,7 @@ CoreLab/
 
 <div align="center">
 
-**Última actualización:** 25/09/2026
+**Última actualización:** 08/10/2026
 
 ---
 
