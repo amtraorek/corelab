@@ -4,7 +4,7 @@
 
 WireGuard desplegado mediante [wg-easy](https://github.com/wg-easy/wg-easy)
 (contenedor Docker con panel web y API de gestión de peers) dentro de un LXC
-dedicado (`vn-wireguard`, VMID 402) en la VLAN 40 (Acceso VPN). Es la vía
+dedicado (`vpn-wireguard`, VMID 402) en la VLAN 40 (Acceso VPN). Es la vía
 principal de acceso remoto al CoreLab: el túnel concede a los clientes IP
 dentro de `10.8.0.0/24` y enruta el tráfico completo (*full tunnel*) a través
 de la conexión doméstica, quedando expuesto al exterior únicamente el puerto
@@ -24,7 +24,7 @@ de la conexión doméstica, quedando expuesto al exterior únicamente el puerto
 
 ## Integración en la infraestructura
 
-- **Contenedor:** LXC 402 `vn-wireguard` (Debian 12, `10.10.40.2/24`,
+- **Contenedor:** LXC 402 `vpn-wireguard` (Debian 12, `10.10.40.2/24`,
   puerta de enlace `10.10.40.1`, DNS `10.10.10.3`, *search domain*
   `traore.home`), sin privilegios con `nesting`/`keyctl` y acceso a
   `/dev/net/tun`; 2 vCPU / 1 GiB RAM / 8 GiB disco, arranque automático.
@@ -62,7 +62,7 @@ de la conexión doméstica, quedando expuesto al exterior únicamente el puerto
                │
                ▼
   ┌── VLAN 40 ────────────────────────────────┐
-  │  LXC 402 vn-wireguard 10.10.40.2          │
+  │  LXC 402 vpn-wireguard 10.10.40.2          │
   │  wg-easy: wg0 (10.8.0.0/24)               │
   │  51820/udp (túnel) · 51821/tcp (UI/API)   │
   └───────────────────────────────────────────┘
