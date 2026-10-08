@@ -101,7 +101,7 @@ Más detalle en [`docs/architecture/network.md`](docs/architecture/network.md).
 | [Nginx Proxy Manager](docs/services/nginx-proxy-manager.md) | Proxy inverso y gestión de HTTPS | ✅ |
 | [WireGuard](docs/services/wireguard.md) | VPN de acceso remoto principal | ✅ |
 | [Tailscale](docs/services/tailscale.md) | VPN mesh de contingencia | ✅ |
-| [OPNsense](docs/services/opnsense.md) | Firewall y router inter-VLAN | 🔄 |
+| [OPNsense](docs/services/opnsense.md) | Firewall y router inter-VLAN | ✅ |
 | [Uptime Kuma](docs/services/uptime-kuma.md) | Monitorización de disponibilidad | ✅ |
 | [Vaultwarden](docs/services/vaultwarden.md) | Gestor de contraseñas autoalojado | ✅ |
 | [Prometheus + Grafana](docs/services/prometheus-grafana.md) | Monitorización de métricas y dashboards | ✅ |
